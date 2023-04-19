@@ -291,8 +291,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad ip-address '10.30.50.200'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad mac-address 'ac:00:7a:55:4b:07'
 
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone ip-address '10.1.2.21'
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone mac-address 'f8:4d:89:7a:db:8b'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone ip-address '10.30.50.200'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone mac-address 'ac:00:7a:55:4b:07'
 
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Stefanies-MBP ip-address '10.30.50.254'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Stefanies-MBP mac-address '5c:e9:1e:b0:89:f1'
