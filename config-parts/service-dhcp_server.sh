@@ -6,176 +6,305 @@ set service dhcp-server host-decl-name
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
 set service dhcp-server shared-network-name GUEST ping-check
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 default-router '192.168.2.1'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 lease '86400'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 start '192.168.2.200'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 stop '192.168.2.254'
-
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 static-mapping manyie-work-laptop ip-address '192.168.2.11'
-set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 static-mapping manyie-work-laptop mac-address '14:f6:d8:32:46:41'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 default-router '10.35.0.1'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 lease '86400'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 name-server '1.1.1.1'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 range 0 start '10.35.0.200'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 range 0 stop '10.35.0.254'
 
 # IoT VLAN
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT ping-check
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 default-router '10.1.3.1'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name 'bjw-s.tech'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.200'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.254'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 default-router '10.40.0.1'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 domain-name 'holthome.net'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 lease '86400'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 range 0 start '10.40.0.200'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 range 0 stop '10.40.0.254'
 
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-3dprinter-plug ip-address '10.1.3.33'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-3dprinter-plug mac-address 'a4:e5:7c:ab:f4:cd'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-desk-plug ip-address '10.1.3.31'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-desk-plug mac-address 'a4:e5:7c:ab:f5:ad'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-hue-bridge ip-address '10.1.3.24'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-hue-bridge mac-address '00:17:88:2e:2d:5d'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-speaker-esp ip-address '10.1.3.36'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping attic-office-speaker-esp mac-address 'e8:9f:6d:0a:53:24'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping backyard-shed-esp ip-address '10.1.3.42'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping backyard-shed-esp mac-address 'b4:e6:2d:59:de:0c'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bedroom-eva-sonos ip-address '10.1.3.65'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bedroom-eva-sonos mac-address 'b8:e9:37:55:d8:6c'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bernd-ereader ip-address '10.1.3.51'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bernd-ereader mac-address '58:b0:d4:6e:53:29'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping garage-tablet ip-address '10.1.3.54'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping garage-tablet mac-address '4c:ef:c0:00:50:aa'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping garden-wlanthermo ip-address '10.1.3.21'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping garden-wlanthermo mac-address '8c:aa:b5:c1:ce:c8'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-tablet ip-address '10.1.3.53'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-tablet mac-address 'f4:f3:09:c9:40:33'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-p1reader-esp ip-address '10.1.3.45'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-p1reader-esp mac-address 'c4:5b:be:49:4c:c8'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-tado-bridge ip-address '10.1.3.23'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-tado-bridge mac-address 'ec:e5:12:1b:39:a6'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-zigbee-adapter ip-address '10.1.3.46'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hallway-zigbee-adapter mac-address 'cc:db:a7:48:19:b3'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-coffeemaker ip-address '10.1.3.13'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-coffeemaker mac-address '68:a4:0e:35:43:72'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-oven ip-address '10.1.3.12'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-oven mac-address '68:a4:0e:34:fc:6f'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-sonos ip-address '10.1.3.61'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping kitchen-sonos mac-address '48:a6:b8:d3:6c:f4'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-airpurifier ip-address '10.1.3.19'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-airpurifier mac-address '78:11:dc:bc:eb:de'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-receiver ip-address '10.1.3.17'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-receiver mac-address '00:05:cd:82:29:21'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-shield ip-address '10.1.3.16'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-shield mac-address '48:b0:2d:2d:4b:cc'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-sonos ip-address '10.1.3.63'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-sonos mac-address '48:a6:b8:dc:6c:7e'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-tv ip-address '10.1.3.14'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-tv mac-address '74:40:be:0d:54:9a'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-vacuum ip-address '10.1.3.18'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-vacuum mac-address '50:ec:50:1d:37:3c'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-harmony-hub ip-address '10.1.3.15'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-harmony-hub mac-address '00:04:20:fd:2d:e4'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-nintendo-switch ip-address '10.1.3.20'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-nintendo-switch mac-address '98:41:5c:b2:98:2e'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-receiver-sonos ip-address '10.1.3.66'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-receiver-sonos mac-address 'b8:e9:37:9b:f5:c6'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-sonos-move ip-address '10.1.3.67'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping livingroom-sonos-move mac-address 'c4:38:75:25:83:76'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping manyie-ereader ip-address '10.1.3.52'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping manyie-ereader mac-address '58:b0:d4:67:f5:74'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping spare-p1eu-1 ip-address '10.1.3.34'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping spare-p1eu-1 mac-address 'a4:e5:7c:ab:c8:db'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping study-printer ip-address '10.1.3.55'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping study-printer mac-address '80:2b:f9:d4:3a:be'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-vacuum ip-address '10.1.3.22'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-vacuum mac-address '7c:49:eb:94:4a:58'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-sonos ip-address '10.1.3.62'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-sonos mac-address '94:9f:3e:04:88:2a'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-desk-plug ip-address '10.1.3.32'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-desk-plug mac-address 'a4:e5:7c:ab:ca:33'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-speaker-esp ip-address '10.1.3.35'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping upstairs-office-speaker-esp mac-address '4c:75:25:bf:b4:d0'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping august-front-door ip-address '10.40.50.220'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping august-front-door mac-address '78:9c:85:0d:91:4d'
 
-# LAN
-set service dhcp-server shared-network-name LAN authoritative
-set service dhcp-server shared-network-name LAN ping-check
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 default-router '10.1.0.1'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 lease '86400'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.200'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping august-patio-door ip-address '10.40.50.221'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping august-patio-door mac-address '78:9c:85:21:7c:01'
 
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap01 ip-address '10.1.0.21'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap01 mac-address '44:d9:e7:fc:21:f9'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap02 ip-address '10.1.0.22'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap02 mac-address 'fc:ec:da:b6:27:87'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap03 ip-address '10.1.0.23'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap03 mac-address 'e0:63:da:ac:d4:3e'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap04 ip-address '10.1.0.24'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap04 mac-address '80:2a:a8:d3:0b:b3'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 ip-address '10.1.0.11'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 mac-address '70:a7:41:f3:c8:92'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch02 ip-address '10.1.0.12'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch02 mac-address '68:d7:9a:3c:b0:75'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch03 ip-address '10.1.0.13'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch03 mac-address '74:83:c2:0c:19:90'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping basement-xbox ip-address '10.40.50.16'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping basement-xbox mac-address '4c:3b:df:db:0e:92'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping basement-tv-switch ip-address '10.40.50.215'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping basement-tv-switch mac-address '48:3f:da:2b:14:3b'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping ecobee ip-address '10.40.50.180'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping ecobee mac-address '44:61:32:f0:99:8b'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping energy-meter ip-address '10.40.50.200'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping energy-meter mac-address '3c:61:05:2a:e4:a0'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping espresense-office ip-address '10.40.50.240'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping espresense-office mac-address '94:b5:55:26:37:c4'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping firetv-bar-tv ip-address '10.40.50.15'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping firetv-bar-tv mac-address '74:ec:b2:5a:c3:47'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping flair ip-address '10.40.50.182'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping flair mac-address '48:3f:da:52:ec:3c'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping front-under-bar-lights ip-address '10.40.50.203'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping front-under-bar-lights mac-address '84:cc:a8:af:a2:ca'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-door ip-address '10.40.50.208'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-door mac-address 'e8:db:84:d4:cd:53'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-front-lights ip-address '10.40.50.204'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-front-lights mac-address '68:c6:3a:fb:70:ae'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-side-lights ip-address '10.40.50.210'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping garage-side-lights mac-address '68:c6:3a:fb:3b:78'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping google-home-kitchen-display ip-address '10.40.50.114'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping google-home-kitchen-display mac-address 'a4:77:33:f2:65:38'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping google-home-mini-ryanoffice ip-address '10.40.50.112'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping google-home-mini-ryanoffice mac-address '30:fd:38:75:0f:a1'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hdhr ip-address '10.40.50.70'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hdhr mac-address '00:18:dd:04:cb:77'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hp-printer ip-address '10.40.50.5'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hp-printer mac-address 'f8:0d:ac:7b:d9:90'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hue-bridge ip-address '10.40.50.181'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping hue-bridge mac-address 'ec:b5:fa:9c:5a:d3'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lg-basement-tv ip-address '10.40.50.170'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lg-basement-tv mac-address '20:3d:bd:6b:24:d2'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lg-master-bedroom-tv ip-address '10.40.50.171'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lg-master-bedroom-tv mac-address 'ac:f1:08:59:b5:46'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-1 ip-address '10.40.50.190'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-1 mac-address 'd0:73:d5:20:16:2a'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-2 ip-address '10.40.50.191'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-2 mac-address 'd0:73:d5:20:18:7d'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-3 ip-address '10.40.50.192'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-bar-ceiling-3 mac-address 'd0:73:d5:20:24:d5'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-mb-ryan ip-address '10.40.50.195'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-mb-ryan mac-address 'd0:73:d5:11:55:05'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-mb-steffi ip-address '10.40.50.196'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping lifx-mb-steffi mac-address 'd0:73:d5:11:59:1c'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping master-bathroom-counter-light ip-address '10.40.50.207'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping master-bathroom-counter-light mac-address 'e8:68:e7:f0:45:cd'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping master-bedroom-tv-light ip-address '10.40.50.197'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping master-bedroom-tv-light mac-address '9c:04:a0:71:66:26'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping miele-dishwasher ip-address '10.40.50.186'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping miele-dishwasher mac-address '00:1d:63:27:64:45'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nintendo-switch-1 ip-address '10.40.50.10'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nintendo-switch-1 mac-address '58:2f:40:7c:25:19'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nintendo-switch-2 ip-address '10.40.50.11'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nintendo-switch-2 mac-address '48:a5:e7:79:07:ef'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-basement ip-address '10.40.50.13'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-basement mac-address '48:b0:2d:13:b7:a0'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-livingroom ip-address '10.40.50.12'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-livingroom mac-address '00:04:4b:83:12:01'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-master-bedroom ip-address '10.40.50.14'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping nvidia-shield-tv-master-bedroom mac-address '48:b0:2d:13:d1:d6'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping openspot4 ip-address '10.40.50.245'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping openspot4 mac-address '7c:df:a1:e6:d5:ac'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping patio-door-lights ip-address '10.40.50.205'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping patio-door-lights mac-address '68:c6:3a:fb:42:b6'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping porch-ceiling-lights ip-address '10.40.50.209'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping porch-ceiling-lights mac-address '68:c6:3a:fb:67:e3'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-bar ip-address '10.40.50.153'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-bar mac-address '48:a6:b8:f9:11:b6'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-basement ip-address '10.40.50.152'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-basement mac-address '5c:aa:fd:4e:d6:24'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-move ip-address '10.40.50.154'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-move mac-address '48:a6:b8:e0:cd:ec'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-office ip-address '10.40.50.155'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-office mac-address '48:a6:b8:68:81:b5'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-kitchen-1 ip-address '10.40.50.150'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-kitchen-1 mac-address '34:7e:5c:1e:04:82'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-livingroom-tv ip-address '10.40.50.156'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-livingroom-tv mac-address '54:2a:1b:87:58:10'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-master-bedroom-tv ip-address '10.40.50.157'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-master-bedroom-tv mac-address '48:a6:b8:b3:9f:e7'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-upstairs-hallway ip-address '10.40.50.151'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sonos-upstairs-hallway mac-address '5c:aa:fd:4e:d2:9e'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sunroom-corner-lights ip-address '10.40.50.202'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sunroom-corner-lights mac-address 'e8:68:e7:f1:5a:c3'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sunroom-window-lights ip-address '10.40.50.211'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping sunroom-window-lights mac-address '3c:61:05:eb:e0:29'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-caydan-switch-lights ip-address '10.40.50.212'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-caydan-switch-lights mac-address '8c:aa:b5:5f:97:26'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-jayme-switch-lights ip-address '10.40.50.214'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-jayme-switch-lights mac-address 'e8:db:84:d2:2b:fb'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-taylor-switch-lights ip-address '10.40.50.213'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping upstairs-taylor-switch-lights mac-address 'e8:db:84:d2:e0:67'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping utility-room-sensors ip-address '10.40.50.201'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping utility-room-sensors mac-address '7c:9e:bd:f5:2e:b0'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping well-switch ip-address '10.40.50.206'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping well-switch mac-address 'dc:4f:22:4c:98:98'
+
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping zigbee-controller ip-address '10.40.50.185'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mapping zigbee-controller mac-address '94:b9:7e:6b:bb:d3'
+
+# MGMT
+set service dhcp-server shared-network-name MGMT authoritative
+set service dhcp-server shared-network-name MGMT ping-check
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 default-router '10.9.18.1'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 lease '86400'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '1.1.1.1'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 start '10.9.18.200'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 stop '10.9.18.254'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-basement ip-address '10.9.18.108'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-basement mac-address 'c0:06:c3:aa:84:ea'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-garage ip-address '10.9.18.109'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-garage mac-address '00:31:92:8A:74:A6'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-patio ip-address '10.9.18.105'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-patio mac-address '00:31:92:8a:7e:ee'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-upstairs ip-address '10.9.18.107'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ap-upstairs mac-address 'c0:06:c3:aa:81:28'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping sw-0 ip-address '10.9.18.106'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping sw-0 mac-address 'c0:06:c3:c9:72:03'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ubnt-10gbswitch ip-address '10.9.18.102'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ubnt-10gbswitch mac-address 'b4:fb:e4:56:cf:8e'
+
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ubnt-16poeswitch ip-address '10.9.18.103'
+set service dhcp-server shared-network-name LAN subnet 10.9.18.0/24 static-mapping ubnt-16poeswitch mac-address 'b4:fb:e4:1c:a1:f6'
 
 # Servers VLAN
 set service dhcp-server shared-network-name SERVERS authoritative
 set service dhcp-server shared-network-name SERVERS ping-check
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 default-router '10.1.1.1'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 domain-name 'bjw-s.tech'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 lease '86400'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 start '10.1.1.200'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 stop '10.1.1.254'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 default-router '10.20.0.1'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 domain-name 'holthome.net'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 lease '86400'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 start '10.20.0.200'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 stop '10.20.0.254'
 
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping delta ip-address '10.1.1.31'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping delta mac-address '00:e0:4c:68:02:b1'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping enigma ip-address '10.1.1.32'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping enigma mac-address '00:e0:4c:68:18:2d'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping felix ip-address '10.1.1.33'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping felix mac-address '00:e0:4c:68:18:23'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping librarium ip-address '10.1.1.11'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping librarium mac-address '00:11:32:9a:e3:5f'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 ip-address '10.20.0.20'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 mac-address '00:a0:98:5a:f7:f0'
 
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping horus ip-address '10.1.1.51'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping horus mac-address 'b8:27:eb:b2:09:b0'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping diego ip-address '10.1.1.52'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping diego mac-address 'dc:a6:32:93:f5:83'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-0 ip-address '10.20.10.20'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-0 mac-address '0c:c4:7a:8e:90:f4'
 
-# Trusted VLAN
-set service dhcp-server shared-network-name TRUSTED authoritative
-set service dhcp-server shared-network-name TRUSTED ping-check
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 default-router '10.1.2.1'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 domain-name 'bjw-s.tech'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 lease '86400'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 range 0 start '10.1.2.200'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 range 0 stop '10.1.2.254'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-1 ip-address '10.20.10.21'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-1 mac-address '0c:c4:7a:8f:9f:f2'
 
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping bernd-ipad ip-address '10.1.2.32'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping bernd-ipad mac-address '54:62:e2:53:72:1b'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping bernd-iphone ip-address '10.1.2.31'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping bernd-iphone mac-address '24:5e:48:98:39:1c'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping delphi ip-address '10.1.2.21'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping delphi mac-address 'f8:4d:89:7a:db:8b'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping eva-ipad ip-address '10.1.2.35'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping eva-ipad mac-address 'aa:ab:96:ce:f8:03'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping kitchen-ipad ip-address '10.1.2.36'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping kitchen-ipad mac-address '34:e2:fd:ac:7c:fa'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-ipad ip-address '10.1.2.34'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-ipad mac-address '94:bf:2d:f0:3f:c3'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-iphone ip-address '10.1.2.33'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-iphone mac-address '8c:98:6b:a9:18:cb'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-macbook ip-address '10.1.2.22'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping manyie-macbook mac-address '8c:85:90:18:42:38'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-2 ip-address '10.20.10.22'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-2 mac-address '0c:c4:7a:8f:3e:04'
+
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-3 ip-address '10.20.10.23'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-3 mac-address '0c:c4:7a:eb:21:fc'
+
 
 # Video VLAN
 set service dhcp-server shared-network-name VIDEO authoritative
 set service dhcp-server shared-network-name VIDEO ping-check
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 default-router '10.1.4.1'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 domain-name 'bjw-s.tech'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 lease '86400'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 range 0 start '10.1.4.200'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 range 0 stop '10.1.4.254'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 default-router '10.50.0.1'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 domain-name 'holthome.net'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 lease '86400'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 range 0 start '10.50.0.200'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 range 0 stop '10.50.0.254'
 
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 static-mapping driveway-camera-doorbell ip-address '10.1.4.12'
-set service dhcp-server shared-network-name VIDEO subnet 10.1.4.0/24 static-mapping driveway-camera-doorbell mac-address '9c:8e:cd:30:a1:e6'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping amcrest-frontdoor ip-address '10.50.50.101'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping amcrest-frontdoor mac-address '9c:8e:cd:30:99:4d'
+
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping camera-backpatio ip-address '10.50.50.100'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping camera-backpatio mac-address '58:50:ed:2d:47:4b'
+
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping camera-driveway ip-address '10.50.50.103'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping camera-driveway mac-address '58:50:ed:2d:46:bf'
+
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping wyze-dogs ip-address '10.50.50.102'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 static-mapping wyze-dogs mac-address 'd0:3f:27:01:4a:0f'
+
+# Wired VLAN
+set service dhcp-server shared-network-name WIRED authoritative
+set service dhcp-server shared-network-name WIRED ping-check
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 default-router '10.10.0.1'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 domain-name 'holthome.net'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 lease '86400'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 start '10.10.0.200'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 stop '10.10.0.254'
+
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping Ryan-PC ip-address '10.10.0.198'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping Ryan-PC mac-address '52:54:00:f5:e6:19'
+
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping flex ip-address '10.10.0.50'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping flex mac-address '00:1c:2d:05:22:80'
+
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping rydesk ip-address '10.10.0.200'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping rydesk mac-address '8a:3c:36:ca:48:4e'
+
+# Wireless VLAN
+set service dhcp-server shared-network-name WIRELESS authoritative
+set service dhcp-server shared-network-name WIRELESS ping-check
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 default-router '10.30.0.1'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 domain-name 'holthome.net'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 lease '86400'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 start '10.30.0.200'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 stop '10.30.0.254'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad ip-address '10.30.50.252'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad mac-address '10:00:20:33:a3:84'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad ip-address '10.30.50.200'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad mac-address 'ac:00:7a:55:4b:07'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone ip-address '10.1.2.21'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPhone mac-address 'f8:4d:89:7a:db:8b'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Stefanies-MBP ip-address '10.30.50.254'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Stefanies-MBP mac-address '5c:e9:1e:b0:89:f1'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Steffi-PC ip-address '10.30.50.251'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Steffi-PC mac-address '50:1a:c5:e9:75:af'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad ip-address '10.30.50.255'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad mac-address '6c:7e:67:af:7d:46'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rybook ip-address '10.30.50.250'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rybook mac-address 'bc:83:85:cf:53:82'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rymac ip-address '10.30.50.253'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rymac mac-address 'bc:d0:74:22:c9:68'
