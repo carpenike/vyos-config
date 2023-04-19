@@ -124,12 +124,12 @@ set nat destination rule 114 inbound-interface 'bond0.4000'
 set nat destination rule 114 protocol 'udp'
 set nat destination rule 114 translation address '10.40.50.16'
 
-set nat destination rule 114 description 'Forward TCP Xbox Ports to Xbox'
-set nat destination rule 114 destination port '3074'
-set nat destination rule 114 inbound-interface 'bond0.4000'
-set nat destination rule 114 protocol 'tcp'
-set nat destination rule 114 translation address '10.40.50.16'
-set nat destination rule 114 translation port '3074'
+set nat destination rule 115 description 'Forward TCP Xbox Ports to Xbox'
+set nat destination rule 115 destination port '3074'
+set nat destination rule 115 inbound-interface 'bond0.4000'
+set nat destination rule 115 protocol 'tcp'
+set nat destination rule 115 translation address '10.40.50.16'
+set nat destination rule 115 translation port '3074'
 
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
