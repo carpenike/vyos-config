@@ -7,7 +7,7 @@
   "platform": "github",
   "username": "carpenike-bot[bot]",
   "gitAuthor": "carpenike-bot <101431553+carpenike-bot[bot]@users.noreply.github.com>",
-  "repositories": ["bjw-s/vyos-config"],
+  "repositories": ["carpenike/vyos-config"],
   "regexManagers": [
     {
       "description": ["Generic Docker image Regex manager"],
