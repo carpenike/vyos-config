@@ -13,17 +13,17 @@ set container name adguard-home volume config destination '/opt/adguardhome/conf
 set container name adguard-home volume config source '/config/adguard-home/conf'
 
 # cloudflare-ddns
-# set container name cloudflare-ddns allow-host-networks
-# set container name cloudflare-ddns environment CF_API_TOKEN value "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
-# set container name cloudflare-ddns environment DOMAINS value 'ipv4.schorgers.nl,ipv4.bjw-s.tech,ipv4.bjw-s.dev,ipv4.bjws.nl'
-# set container name cloudflare-ddns environment IP6_PROVIDER value "none"
-# set container name cloudflare-ddns environment TZ value 'Europe/Amsterdam'
-# set container name cloudflare-ddns environment PGID value "1000"
-# set container name cloudflare-ddns environment PUID value "1000"
-# set container name cloudflare-ddns image 'docker.io/favonia/cloudflare-ddns:1.9.2'
-# set container name cloudflare-ddns memory '0'
-# set container name cloudflare-ddns restart 'on-failure'
-# set container name cloudflare-ddns shared-memory '0'
+set container name cloudflare-ddns allow-host-networks
+set container name cloudflare-ddns environment CF_API_TOKEN value "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
+set container name cloudflare-ddns environment DOMAINS value 'ipv4.holthome.net'
+set container name cloudflare-ddns environment IP6_PROVIDER value "none"
+set container name cloudflare-ddns environment TZ value 'America/New_York'
+set container name cloudflare-ddns environment PGID value "1000"
+set container name cloudflare-ddns environment PUID value "1000"
+set container name cloudflare-ddns image 'docker.io/favonia/cloudflare-ddns:1.9.2'
+set container name cloudflare-ddns memory '0'
+set container name cloudflare-ddns restart 'on-failure'
+set container name cloudflare-ddns shared-memory '0'
 
 # coredns - main instance
 set container name coredns cap-add 'net-bind-service'
