@@ -9,6 +9,7 @@ set system static-host-mapping host-name fw.holthome.net alias ipv4.holthome.net
 set system static-host-mapping host-name nas-0.holthome.net inet 10.20.0.10
 set system static-host-mapping host-name nas-0.holthome.net alias nas.holthome.net
 set system static-host-mapping host-name nas-1.holthome.net inet 10.20.0.11
+set system static-host-mapping host-name minio.holthome.net inet 10.20.50.50
 
 # Kubernetes hosts
 set system static-host-mapping host-name cp-0.holthome.net inet 10.20.0.20
