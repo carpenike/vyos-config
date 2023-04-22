@@ -2,6 +2,8 @@
 
 set service dhcp-server hostfile-update
 set service dhcp-server host-decl-name
+set service dhcp-server global-parameters 'option omada-address code 138 = ip-address;'
+
 
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
@@ -181,6 +183,7 @@ set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 static-mappi
 # MGMT
 set service dhcp-server shared-network-name MGMT authoritative
 set service dhcp-server shared-network-name MGMT ping-check
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 subnet-parameters 'option omada-address 10.45.10.20;'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 default-router '10.9.18.1'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 lease '86400'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '1.1.1.1'
