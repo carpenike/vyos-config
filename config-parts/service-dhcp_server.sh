@@ -303,6 +303,9 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Steffi-PC ip-address '10.30.50.251'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Steffi-PC mac-address '50:1a:c5:e9:75:af'
 
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping StefaniesiPhone ip-address '10.30.50.201'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping StefaniesiPhone mac-address '88:b9:45:32:84:e4'
+
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad ip-address '10.30.50.255'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad mac-address '6c:7e:67:af:7d:46'
 
