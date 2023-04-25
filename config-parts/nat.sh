@@ -131,6 +131,19 @@ set nat destination rule 115 protocol 'tcp'
 set nat destination rule 115 translation address '10.40.50.16'
 set nat destination rule 115 translation port '3074'
 
+set nat destination rule 116 description 'Forward UDP Ports for FusionHub'
+set nat destination rule 116 destination port '4501'
+set nat destination rule 116 inbound-interface 'bond0.4000'
+set nat destination rule 116 protocol 'udp'
+set nat destination rule 116 translation address '10.10.0.10'
+set nat destination rule 116 translation port '4501'
+
+set nat destination rule 117 description 'Forward TCP Ports for FusionHub'
+set nat destination rule 117 destination port '5312,32015'
+set nat destination rule 117 inbound-interface 'bond0.4000'
+set nat destination rule 117 protocol 'tcp'
+set nat destination rule 117 translation address '10.10.0.10'
+
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
 set nat source rule 100 destination address '0.0.0.0/0'
