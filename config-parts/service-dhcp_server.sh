@@ -315,34 +315,3 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping zigbee-controller ip-address '10.30.100.185'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping zigbee-controller mac-address '94:b9:7e:6b:bb:d3'
-
-# MGMT
-set service dhcp-server shared-network-name MGMT authoritative
-set service dhcp-server shared-network-name MGMT ping-check
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 subnet-parameters 'option omada-address 10.45.10.20;'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 default-router '10.9.18.1'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 lease '86400'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '1.1.1.1'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 start '10.9.18.200'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 stop '10.9.18.254'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-basement ip-address '10.9.18.108'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-basement mac-address 'c0:06:c3:aa:84:ea'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-garage ip-address '10.9.18.109'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-garage mac-address '00:31:92:8A:74:A6'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-patio ip-address '10.9.18.105'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-patio mac-address '00:31:92:8a:7e:ee'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-upstairs ip-address '10.9.18.107'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ap-upstairs mac-address 'c0:06:c3:aa:81:28'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping sw-0 ip-address '10.9.18.106'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping sw-0 mac-address 'c0:06:c3:c9:72:03'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ubnt-10gbswitch ip-address '10.9.18.102'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ubnt-10gbswitch mac-address 'b4:fb:e4:56:cf:8e'
-
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ubnt-16poeswitch ip-address '10.9.18.103'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 static-mapping ubnt-16poeswitch mac-address 'b4:fb:e4:1c:a1:f6'
