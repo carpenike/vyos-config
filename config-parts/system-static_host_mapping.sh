@@ -29,3 +29,4 @@ set system static-host-mapping host-name node-0-ipmi.holthome.net inet 10.9.18.2
 set system static-host-mapping host-name node-1-ipmi.holthome.net inet 10.9.18.21
 set system static-host-mapping host-name node-2-ipmi.holthome.net inet 10.9.18.22
 set system static-host-mapping host-name node-3-ipmi.holthome.net inet 10.9.18.23
+set system static-host-mapping host-name apc-ups.holthome.net inet 10.9.18.245
