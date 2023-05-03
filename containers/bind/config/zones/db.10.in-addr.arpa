@@ -1,0 +1,39 @@
+; Make sure to update the epoch time in the SOA records so coreDNS picks up the changes automatically
+; https://www.epochconverter.com/
+
+; SOA Records
+$TTL 3600
+$ORIGIN 10.in-addr.arpa.
+@ 3600 IN SOA fw.holthome.net. fw.holthome.net. (
+  1682790096         ; serial number (epoch timestamp)
+  7200               ; refresh period
+  3600               ; retry period
+  1209600            ; expire time
+  3600               ; minimum ttl
+)
+
+; NS Records
+@                          IN  NS fw.holthome.net.
+
+; Reset origin
+$ORIGIN in-addr.arpa.
+
+; LAN
+1.0.20.10                   IN  PTR  fw.holthome.net.
+
+; Servers
+10.0.20.10                 IN  PTR  nas-0.holthome.net.
+11.0.20.10                 IN  PTR  nas-1.holthome.net.
+20.0.20.10                 IN  PTR  cp-0.holthome.net.
+20.10.20.10                IN  PTR  node-0.holthome.net.
+21.10.20.10                IN  PTR  node-1.holthome.net.
+22.10.20.10                IN  PTR  node-2.holthome.net.
+23.10.20.10                IN  PTR  node-3.holthome.net.
+
+; Mgmt
+10.18.9.10                 IN  PTR  nas-0-ipmi.holthome.net.
+11.18.9.10                 IN  PTR  nas-1-ipmi.holthome.net.
+20.18.9.10                 IN  PTR  node-0-ipmi.holthome.net.
+21.10.20.10                IN  PTR  node-1-ipmi.holthome.net.
+22.10.20.10                IN  PTR  node-2-ipmi.holthome.net.
+23.10.20.10                IN  PTR  node-3-ipmi.holthome.net.
