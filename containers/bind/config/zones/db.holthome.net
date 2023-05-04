@@ -16,8 +16,9 @@ $ORIGIN holthome.net.
 @                          IN  NS fw.holthome.net.
 
 ; Services
+fw                         IN  A 10.20.0.1
 onepassword-connect        IN  A 10.6.0.5
 
 ; CNAME Records
-nas                      IN  CNAME nas-1.holthome.net.
+nas                        IN  CNAME nas-1.holthome.net.
 vpn                        IN  CNAME fw.holthome.net.
