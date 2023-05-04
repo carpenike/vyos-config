@@ -45,7 +45,7 @@ set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 interface bond0 sla-id
 set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 interface bond0.10 sla-id 1
 set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 interface bond0.20 sla-id 2
 set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 interface bond0.30 sla-id 3
-set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 length 60
+set interfaces bonding bond0 vif 4000 dhcpv6-options pd 0 length 56
 set interfaces bonding bond0 vif 4000 ipv6 address autoconf
 
 set interfaces wireguard wg01 address '10.11.0.1/16'
