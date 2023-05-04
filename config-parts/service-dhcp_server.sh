@@ -9,7 +9,7 @@ set service dhcp-server shared-network-name GUEST authoritative
 set service dhcp-server shared-network-name GUEST ping-check
 set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 default-router '10.35.0.1'
 set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 lease '86400'
-set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 name-server '1.1.1.1'
+set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 range 0 start '10.35.0.200'
 set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 range 0 stop '10.35.0.254'
 
@@ -19,7 +19,7 @@ set service dhcp-server shared-network-name IOT ping-check
 set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 default-router '10.40.0.1'
 set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 lease '86400'
-set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 range 0 start '10.40.0.200'
 set service dhcp-server shared-network-name IOT subnet 10.40.0.0/16 range 0 stop '10.40.0.254'
 
@@ -29,7 +29,7 @@ set service dhcp-server shared-network-name MGMT ping-check
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 subnet-parameters 'option omada-address 10.45.10.20;'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 default-router '10.9.18.1'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 lease '86400'
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '1.1.1.1'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '10.6.0.4'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 start '10.9.18.200'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 range 0 stop '10.9.18.254'
 
@@ -60,7 +60,7 @@ set service dhcp-server shared-network-name SERVERS ping-check
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 default-router '10.20.0.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 lease '86400'
-set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 start '10.20.0.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 stop '10.20.0.254'
 
@@ -85,7 +85,7 @@ set service dhcp-server shared-network-name VIDEO ping-check
 set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 default-router '10.50.0.1'
 set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 lease '86400'
-set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 range 0 start '10.50.0.200'
 set service dhcp-server shared-network-name VIDEO subnet 10.50.0.0/16 range 0 stop '10.50.0.254'
 
@@ -107,7 +107,7 @@ set service dhcp-server shared-network-name WIRED ping-check
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 default-router '10.10.0.1'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 lease '86400'
-set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 start '10.10.0.200'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 stop '10.10.0.254'
 
@@ -129,7 +129,7 @@ set service dhcp-server shared-network-name WIRELESS ping-check
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 default-router '10.30.0.1'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 lease '86400'
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-server '10.6.0.6'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-server '10.6.0.4'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 start '10.30.0.200'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 stop '10.30.0.254'
 

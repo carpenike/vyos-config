@@ -26,19 +26,19 @@ set nat destination rule 102 translation port '80'
 
 # Force DNS
 set nat destination rule 103 description 'Force DNS for IoT'
-set nat destination rule 103 destination address '!10.6.0.6'
+set nat destination rule 103 destination address '!10.6.0.4'
 set nat destination rule 103 destination port '53'
 set nat destination rule 103 inbound-interface 'bond0.40'
 set nat destination rule 103 protocol 'tcp_udp'
-set nat destination rule 103 translation address '10.6.0.6'
+set nat destination rule 103 translation address '10.6.0.4'
 set nat destination rule 103 translation port '53'
 
 set nat destination rule 104 description 'Force DNS for Video'
-set nat destination rule 104 destination address '!10.6.0.6'
+set nat destination rule 104 destination address '!10.6.0.4'
 set nat destination rule 104 destination port '53'
 set nat destination rule 104 inbound-interface 'bond0.50'
 set nat destination rule 104 protocol 'tcp_udp'
-set nat destination rule 104 translation address '10.6.0.6'
+set nat destination rule 104 translation address '10.6.0.4'
 set nat destination rule 104 translation port '53'
 
 # Force NTP
