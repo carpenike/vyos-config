@@ -37,6 +37,7 @@ $ORIGIN in-addr.arpa.
 21.18.9.10                 IN  PTR  node-1-ipmi.holthome.net.
 22.18.9.10                 IN  PTR  node-2-ipmi.holthome.net.
 23.18.9.10                 IN  PTR  node-3-ipmi.holthome.net.
+245.18.9.10                IN  PTR  apc-ups.holthome.net.
 
 ; Services
 2.0.6.10                   IN  PTR  cluster-0.holthome.net.
