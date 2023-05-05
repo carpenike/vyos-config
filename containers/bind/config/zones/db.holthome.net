@@ -16,9 +16,26 @@ $ORIGIN holthome.net.
 @                          IN  NS fw.holthome.net.
 
 ; Services
-fw                         IN  A 10.20.0.1
-onepassword-connect        IN  A 10.6.0.5
+fw                         IN  A  10.20.0.1
+onepassword-connect        IN  A  10.6.0.5
+cluster-0                  IN  A  10.6.0.2
+minio                      IN  A  10.20.50.50
+nas-0                      IN  A  10.0.20.10
+nas-1                      IN  A  10.0.20.11
+cp-0                       IN  A  10.20.0.20
+node-0                     IN  A  10.20.10.20
+node-1                     IN  A  10.20.10.21
+node-2                     IN  A  10.20.10.22
+node-3                     IN  A  10.20.10.23
+
+; Mgmt
+nas-0-ipmi                 IN  A  10.9.18.10
+nas-1-ipmi                 IN  A  10.9.18.11
+node-0-ipmi                IN  A  10.9.18.20
+node-1-ipmi                IN  A  10.9.18.21
+node-2-ipmi                IN  A  10.9.18.22
+node-3-ipmi                IN  A  10.9.18.23
 
 ; CNAME Records
-nas                        IN  CNAME nas-1.holthome.net.
-vpn                        IN  CNAME fw.holthome.net.
+nas                        IN  CNAME  nas-1.holthome.net.
+vpn                        IN  CNAME  fw.holthome.net.

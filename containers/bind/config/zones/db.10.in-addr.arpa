@@ -19,7 +19,7 @@ $ORIGIN 10.in-addr.arpa.
 $ORIGIN in-addr.arpa.
 
 ; LAN
-1.0.20.10                   IN  PTR  fw.holthome.net.
+1.0.20.10                  IN  PTR  fw.holthome.net.
 
 ; Servers
 10.0.20.10                 IN  PTR  nas-0.holthome.net.
@@ -34,6 +34,9 @@ $ORIGIN in-addr.arpa.
 10.18.9.10                 IN  PTR  nas-0-ipmi.holthome.net.
 11.18.9.10                 IN  PTR  nas-1-ipmi.holthome.net.
 20.18.9.10                 IN  PTR  node-0-ipmi.holthome.net.
-21.10.20.10                IN  PTR  node-1-ipmi.holthome.net.
-22.10.20.10                IN  PTR  node-2-ipmi.holthome.net.
-23.10.20.10                IN  PTR  node-3-ipmi.holthome.net.
+21.18.9.10                 IN  PTR  node-1-ipmi.holthome.net.
+22.18.9.10                 IN  PTR  node-2-ipmi.holthome.net.
+23.18.9.10                 IN  PTR  node-3-ipmi.holthome.net.
+
+; Services
+2.0.6.10                   IN  PTR  cluster-0.holthome.net.
