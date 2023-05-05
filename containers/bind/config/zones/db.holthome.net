@@ -21,8 +21,8 @@ onepassword-connect        IN  A  10.6.0.5
 cluster-0                  IN  A  10.6.0.2
 adguard                    IN  A  10.6.0.6
 minio                      IN  A  10.20.50.50
-nas-0                      IN  A  10.0.20.10
-nas-1                      IN  A  10.0.20.11
+nas-0                      IN  A  10.20.10.10
+nas-1                      IN  A  10.20.10.11
 cp-0                       IN  A  10.20.0.20
 node-0                     IN  A  10.20.10.20
 node-1                     IN  A  10.20.10.21
