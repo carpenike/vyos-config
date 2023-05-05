@@ -28,6 +28,7 @@ node-0                     IN  A  10.20.10.20
 node-1                     IN  A  10.20.10.21
 node-2                     IN  A  10.20.10.22
 node-3                     IN  A  10.20.10.23
+nginx-ingress              IN  A  10.45.10.10
 
 ; Mgmt
 nas-0-ipmi                 IN  A  10.9.18.10
@@ -41,4 +42,4 @@ apc-ups                    IN  A  10.9.18.245
 ; CNAME Records
 nas                        IN  CNAME  nas-0.holthome.net.
 vpn                        IN  CNAME  fw.holthome.net.
-ipv4                       IN  CNAME  fw.holthome.net.
+ipv4                       IN  CNAME  nginx-ingress.holthome.net.
