@@ -84,6 +84,11 @@ set firewall name local-wireless default-action 'drop'
 set firewall name local-wireless description 'From LOCAL to WIRELESS'
 set firewall name local-wireless enable-default-log
 
+# FROM LOCAL TO WAN
+set firewall name local-wan default-action 'drop'
+set firewall name local-wan description 'From LOCAL to WAN'
+set firewall name local-wan enable-default-log
+
 # FROM WAN TO WIRELESS
 set firewall name wan-wireless default-action 'drop'
 set firewall name wan-wireless description 'From WAN to WIRELESS'
