@@ -13,6 +13,9 @@ set firewall name wan-local rule 1 protocol 'udp'
 
 ## FROM WIRELESS TO LOCAL
 set firewall name wireless-local default-action 'drop'
+set firewall name wireless-local description 'From WIRELESS to LOCAL'
+set firewall name wireless-local enable-default-log
+set firewall name wireless-local default-action 'drop'
 set firewall name wireless-local description 'From WAN to LOCAL'
 set firewall name wireless-local enable-default-log
 set firewall name wireless-local rule 1 action 'accept'
@@ -37,6 +40,9 @@ set firewall name wireless-local rule 4 destination port 'ssh'
 set firewall name wireless-local rule 4 protocol 'tcp'
 
 # FROM WIRELESS TO WAN
+set firewall name wireless-wan default-action 'drop'
+set firewall name wireless-wan description 'From WIRELESS to WAN'
+set firewall name wireless-wan enable-default-log
 set firewall name wireless-wan rule 1 action 'accept'
 set firewall name wireless-wan rule 1 description 'Rule: accept_http'
 set firewall name wireless-wan rule 1 destination port 'http'
@@ -76,6 +82,11 @@ set firewall name wireless-wan rule 7 description 'Rule: accept_plex_from_plex_c
 set firewall name wireless-wan rule 7 destination port '32400'
 set firewall name wireless-wan rule 7 source group domain-group plex_clients
 set firewall name wireless-wan rule 7 protocol 'tcp'
+
+# FROM LOCAL TO WIRELESS
+set firewall name local-wireless default-action 'drop'
+set firewall name local-wireless description 'From LOCAL to WIRELESS'
+set firewall name local-wireless enable-default-log
 
 # IPv6 Firewall Rules
 ## FROM WAN TO LOCAL
