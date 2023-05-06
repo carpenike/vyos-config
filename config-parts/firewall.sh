@@ -5,6 +5,17 @@ set firewall state-policy established action 'accept'
 set firewall state-policy invalid action 'drop'
 set firewall state-policy related action 'accept'
 
+# Domain Groups
+set firewall group domain-group verizon_wifi_calling address Ryans-iPhone.holthome.net
+set firewall group domain-group verizon_wifi_calling address StefaniesiPhone.holthome.net
+
+set firewall group domain-group amcrest_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group amcrest_clients address StefaniesiPhone.holthome.net
+
+set firewall group domain-group flex_clients address Ryans-iPhone.holthome.net
+
+set firewall group domain-group plex_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group plex_clients address StefaniesiPhone.holthome.net
 
 # Network groups
 ## Cloudflare
