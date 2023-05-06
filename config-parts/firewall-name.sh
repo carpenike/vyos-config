@@ -2,7 +2,6 @@
 
 # IPv4 Firewall Rules
 ## FROM WAN TO LOCAL
-
 set firewall name wan-local default-action 'drop'
 set firewall name wan-local description 'From WAN to LOCAL'
 set firewall name wan-local enable-default-log
@@ -12,9 +11,6 @@ set firewall name wan-local rule 1 destination port '51820'
 set firewall name wan-local rule 1 protocol 'udp'
 
 ## FROM WIRELESS TO LOCAL
-set firewall name wireless-local default-action 'drop'
-set firewall name wireless-local description 'From WIRELESS to LOCAL'
-set firewall name wireless-local enable-default-log
 set firewall name wireless-local default-action 'drop'
 set firewall name wireless-local description 'From WAN to LOCAL'
 set firewall name wireless-local enable-default-log
