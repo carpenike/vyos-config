@@ -35,6 +35,11 @@ set firewall name wireless-local rule 4 description 'Rule: accept_ssh'
 set firewall name wireless-local rule 4 destination port 'ssh'
 set firewall name wireless-local rule 4 protocol 'tcp'
 
+## FROM SERVICES TO LOCAL
+set firewall name services-local default-action 'drop'
+set firewall name services-local description 'From SERVICES to LOCAL'
+set firewall name services-local enable-default-log
+
 # FROM WIRELESS TO WAN
 set firewall name wireless-wan default-action 'drop'
 set firewall name wireless-wan description 'From WIRELESS to WAN'
@@ -83,6 +88,15 @@ set firewall name wireless-wan rule 8 destination port '32400'
 set firewall name wireless-wan rule 8 source group domain-group plex_clients
 set firewall name wireless-wan rule 8 protocol 'tcp'
 
+# FROM WIRELESS TO SERVICES
+set firewall name wireless-services default-action 'drop'
+set firewall name wireless-services description 'From WIRELESS to SERVICES'
+set firewall name wireless-services enable-default-log
+set firewall name wireless-services rule 1 action 'accept'
+set firewall name wireless-services rule 1 description 'Rule: accept_dns'
+set firewall name wireless-services rule 1 destination port 'domain,domain-s'
+set firewall name wireless-services rule 1 protocol 'tcp_udp'
+
 # FROM LOCAL TO WIRELESS
 set firewall name local-wireless default-action 'drop'
 set firewall name local-wireless description 'From LOCAL to WIRELESS'
@@ -93,10 +107,29 @@ set firewall name local-wan default-action 'drop'
 set firewall name local-wan description 'From LOCAL to WAN'
 set firewall name local-wan enable-default-log
 
+# FROM LOCAL TO SERVICES
+set firewall name local-services default-action 'drop'
+set firewall name local-services description 'From LOCAL to SERVICES'
+set firewall name local-services enable-default-log
+set firewall name local-services rule 1 action 'accept'
+set firewall name local-services rule 1 description 'Rule: accept_dns'
+set firewall name local-services rule 1 destination port 'domain,domain-s'
+set firewall name local-services rule 1 protocol 'tcp_udp'
+
 # FROM WAN TO WIRELESS
 set firewall name wan-wireless default-action 'drop'
 set firewall name wan-wireless description 'From WAN to WIRELESS'
 set firewall name wan-wireless enable-default-log
+
+# FROM WAN TO SERVICES
+set firewall name wan-services default-action 'drop'
+set firewall name wan-services description 'From WAN to SERVICES'
+set firewall name wan-services enable-default-log
+
+# FROM SERVICES TO WIRELESS
+set firewall name services-wireless default-action 'drop'
+set firewall name services-wireless description 'From SERVICES to WIRELESS'
+set firewall name services-wireless enable-default-log
 
 # IPv6 Firewall Rules
 ## FROM WAN TO LOCAL
