@@ -29,9 +29,6 @@ set firewall group domain-group nas-nodes address nas-1.holthome.net
 set firewall group domain-group smb_clients address Ryans-iPhone.holthome.net
 set firewall group domain-group smb_clients address StefaniesiPhone.holthome.net
 
-set firewall group domain-group plex_clients address Ryans-iPhone.holthome.net
-set firewall group domain-group plex_clients address StefaniesiPhone.holthome.net
-
 set firewall group domain-group homekit_clients address Ryans-iPhone.holthome.net
 set firewall group domain-group homekit_clients address StefaniesiPhone.holthome.net
 
