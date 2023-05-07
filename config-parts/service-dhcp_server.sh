@@ -10,7 +10,7 @@ set service dhcp-server global-parameters "ddns-domainname &quot;holthome.net.&q
 set service dhcp-server global-parameters "ddns-rev-domainname &quot;in-addr.arpa.&quot;;"
 set service dhcp-server global-parameters "zone in-addr.arpa. { primary 10.6.0.3; key ddnsupdate; }"
 set service dhcp-server global-parameters "zone 10.in-addr.arpa. { primary 10.6.0.3; key ddnsupdate; }"
-set service dhcp-server global-parameters "update-optimization false;
+set service dhcp-server global-parameters "update-optimization false;"
 
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
