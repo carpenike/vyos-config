@@ -107,6 +107,20 @@ set firewall name local-wan default-action 'drop'
 set firewall name local-wan description 'From LOCAL to WAN'
 set firewall name local-wan enable-default-log
 
+set firewall name local-wan rule 1 action 'accept'
+set firewall name local-wan rule 1 description 'Rule: accept_icmp'
+set firewall name local-wan rule 1 protocol 'icmp'
+
+set firewall name local-wan rule 2 action 'accept'
+set firewall name local-wan rule 2 description 'Rule: accept_http'
+set firewall name local-wan rule 2 destination port 'http'
+set firewall name local-wan rule 2 protocol 'tcp'
+
+set firewall name local-wan rule 3 action 'accept'
+set firewall name local-wan rule 3 description 'Rule: accept_https'
+set firewall name local-wan rule 3 destination port 'https'
+set firewall name local-wan rule 3 protocol 'tcp'
+
 # FROM LOCAL TO SERVICES
 set firewall name local-services default-action 'drop'
 set firewall name local-services description 'From LOCAL to SERVICES'
