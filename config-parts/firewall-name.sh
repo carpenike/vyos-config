@@ -190,7 +190,7 @@ set firewall name services-servers rule 1 protocol 'tcp'
 
 set firewall name services-servers rule 2 action 'accept'
 set firewall name services-servers rule 2 description 'Rule: accept_k8s_api'
-set firewall name services-servers rule 2 destination group address-group  k8s_nodes
+set firewall name services-servers rule 2 destination group domain-group  k8s_nodes
 set firewall name services-servers rule 2 destination port '6443'
 set firewall name services-servers rule 2 protocol 'tcp'
 
