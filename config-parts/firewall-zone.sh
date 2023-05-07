@@ -20,7 +20,7 @@ set firewall zone local local-zone
 # set firewall zone wan from lan firewall name 'lan-wan'
 set firewall zone wan from local firewall name 'local-wan'
 # set firewall zone wan from servers firewall name 'servers-wan'
-# set firewall zone wan from services firewall name 'services-wan'
+set firewall zone wan from services firewall name 'services-wan'
 set firewall zone wan from wireless firewall name 'wireless-wan'
 # set firewall zone wan from video firewall name 'video-wan'
 set firewall zone wan interface 'bond0.4000'

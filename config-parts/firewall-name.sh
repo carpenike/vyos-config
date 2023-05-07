@@ -131,6 +131,15 @@ set firewall name services-wireless default-action 'drop'
 set firewall name services-wireless description 'From SERVICES to WIRELESS'
 set firewall name services-wireless enable-default-log
 
+# FROM SERVICES TO WAN
+set firewall name services-wan default-action 'drop'
+set firewall name services-wan description 'From SERVICES to WAN'
+set firewall name services-wan enable-default-log
+set firewall name services-wan rule 1 action 'accept'
+set firewall name services-wan rule 1 description 'Rule: accept_https'
+set firewall name services-wan rule 1 destination port 'https'
+set firewall name services-wan rule 1 protocol 'tcp'
+
 # IPv6 Firewall Rules
 ## FROM WAN TO LOCAL
 set firewall ipv6-name wan-local default-action 'drop'
