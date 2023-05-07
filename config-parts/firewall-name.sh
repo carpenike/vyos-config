@@ -92,6 +92,62 @@ set firewall name wireless-services rule 1 description 'Rule: accept_dns'
 set firewall name wireless-services rule 1 destination port 'domain,domain-s'
 set firewall name wireless-services rule 1 protocol 'tcp_udp'
 
+# FROM WIRELESS TO SERVERS
+set firewall name wireless-servers default-action 'drop'
+set firewall name wireless-servers description 'From WIRELESS to SERVERS'
+set firewall name wireless-servers enable-default-log
+set firewall name wireless-servers rule 1 action 'accept'
+set firewall name wireless-servers rule 1 description 'Rule: accept_icmp'
+set firewall name wireless-servers rule 1 protocol 'icmp'
+
+set firewall name wireless-servers rule 2 action 'accept'
+set firewall name wireless-servers rule 2 description 'Rule: accept_smb_from_smb_clients'
+set firewall name wireless-servers rule 2 destination group domain-group nas_nodes
+set firewall name wireless-servers rule 2 destination port '445'
+set firewall name wireless-servers rule 2 source group domain-group smb_clients
+set firewall name wireless-servers rule 2 protocol 'tcp_udp'
+
+set firewall name wireless-servers rule 3 action 'accept'
+set firewall name wireless-servers rule 3 description 'Rule: accept_plex_from_internal_tcp'
+set firewall name wireless-servers rule 3 destination group address-group k8s_plex
+set firewall name wireless-servers rule 3 destination port '32400,5353,32469'
+set firewall name wireless-servers rule 3 source group domain-group plex_clients
+set firewall name wireless-servers rule 3 protocol 'tcp'
+
+set firewall name wireless-servers rule 4 action 'accept'
+set firewall name wireless-servers rule 4 description 'Rule: accept_plex_from_internal_udp'
+set firewall name wireless-servers rule 4 destination group address-group k8s_plex
+set firewall name wireless-servers rule 4 destination port '1900,5353,8324,32410,32412,32413,32414'
+set firewall name wireless-servers rule 4 source group domain-group plex_clients
+set firewall name wireless-servers rule 4 protocol 'udp'
+
+set firewall name wireless-servers rule 5 action 'accept'
+set firewall name wireless-servers rule 5 description 'Rule: accept_k8s_ingress_from_internal'
+set firewall name wireless-servers rule 5 destination group address-group k8s_ingress
+set firewall name wireless-servers rule 5 destination port 'http,https'
+set firewall name wireless-servers rule 5 protocol 'tcp'
+
+set firewall name wireless-servers rule 6 action 'accept'
+set firewall name wireless-servers rule 6 description 'Rule: accept_homekit_from_ios_devices_to_k8s_nodes_tcp'
+set firewall name wireless-servers rule 6 destination group domain-group k8s_nodes
+set firewall name wireless-servers rule 6 source group domain-group homekit_clients
+set firewall name wireless-servers rule 6 destination port '21063'
+set firewall name wireless-servers rule 6 protocol 'tcp'
+
+set firewall name wireless-servers rule 7 action 'accept'
+set firewall name wireless-servers rule 7 description 'Rule: accept_homekit_from_ios_devices_to_k8s_nodes_udp'
+set firewall name wireless-servers rule 7 destination group domain-group k8s_nodes
+set firewall name wireless-servers rule 7 source group domain-group homekit_clients
+set firewall name wireless-servers rule 7 destination port '5353'
+set firewall name wireless-servers rule 7 protocol 'udp'
+
+set firewall name wireless-servers rule 8 action 'accept'
+set firewall name wireless-servers rule 8 description 'Rule: accept_nfs_from_nfs_clients'
+set firewall name wireless-servers rule 8 destination group domain-group nas_nodes
+set firewall name wireless-servers rule 8 source group domain-group nfs_clients
+set firewall name wireless-servers rule 8 destination port '111,2049,918'
+set firewall name wireless-servers rule 8 protocol 'udp'
+
 # FROM LOCAL TO WIRELESS
 set firewall name local-wireless default-action 'drop'
 set firewall name local-wireless description 'From LOCAL to WIRELESS'

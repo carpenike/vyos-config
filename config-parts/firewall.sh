@@ -23,6 +23,22 @@ set firewall group domain-group k8s_nodes address node-1.holthome.net
 set firewall group domain-group k8s_nodes address node-2.holthome.net
 set firewall group domain-group k8s_nodes address node-3.holthome.net
 
+set firewall group domain-group nas_nodes address nas-0.holthome.net
+set firewall group domain-group nas-nodes address nas-1.holthome.net
+
+set firewall group domain-group smb_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group smb_clients address StefaniesiPhone.holthome.net
+
+set firewall group domain-group plex_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group plex_clients address StefaniesiPhone.holthome.net
+
+set firewall group domain-group homekit_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group homekit_clients address StefaniesiPhone.holthome.net
+
+set firewall group domain-group nfs_clients address Ryans-iPhone.holthome.net
+set firewall group domain-group nfs_clients address StefaniesiPhone.holthome.net
+
+
 # Network groups
 ## Cloudflare
 set firewall group network-group cloudflare-ipv4 network '173.245.48.0/20'
@@ -50,3 +66,5 @@ set firewall group port-group wireguard port '51820'
 # Address Groups
 set firewall group address-group mullvad_ip address '193.32.249.70'
 set firewall group address-group k8s_vector_aggregator address '10.45.10.16'
+set firewall group address-group k8s_plex address '10.45.100.100'
+set firewall group address-group k8s_ingress address '10.45.10.10'
