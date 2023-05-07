@@ -322,6 +322,16 @@ set firewall name servers-wan rule 7 destination port '8080,5060'
 set firewall name servers-wan rule 7 source group domain-group k8s_nodes
 set firewall name servers-wan rule 7 protocol 'tcp_udp'
 
+# FROM SERVERS TO WIRELESS
+set firewall name servers-wireless default-action 'drop'
+set firewall name servers-wireless description 'From SERVERS to WIRELESS'
+set firewall name servers-wireless enable-default-log
+set firewall name servers-wireless rule 1 action 'accept'
+set firewall name servers-wireless rule 1 description 'Rule: accept_resilio_from_k8s_nodes'
+set firewall name servers-wireless rule 1 source group domain-group k8s_nodes
+set firewall name servers-wireless rule 1 destination port '3000'
+set firewall name servers-wireless rule 1 protocol 'tcp'
+
 # IPv6 Firewall Rules
 ## FROM WAN TO LOCAL
 set firewall ipv6-name wan-local default-action 'drop'
