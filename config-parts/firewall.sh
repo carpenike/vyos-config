@@ -17,6 +17,12 @@ set firewall group domain-group flex_clients address Ryans-iPhone.holthome.net
 set firewall group domain-group plex_clients address Ryans-iPhone.holthome.net
 set firewall group domain-group plex_clients address StefaniesiPhone.holthome.net
 
+set firewall group domain-group k8s_nodes address cp-0.holthome.net
+set firewall group domain-group k8s_nodes address node-0.holthome.net
+set firewall group domain-group k8s_nodes address node-1.holthome.net
+set firewall group domain-group k8s_nodes address node-2.holthome.net
+set firewall group domain-group k8s_nodes address node-3.holthome.net
+
 # Network groups
 ## Cloudflare
 set firewall group network-group cloudflare-ipv4 network '173.245.48.0/20'
