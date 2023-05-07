@@ -49,3 +49,4 @@ set firewall group port-group wireguard port '51820'
 
 # Address Groups
 set firewall group address-group mullvad_ip address '193.32.249.70'
+set firewall group address-group k8s_vector_aggregator address '10.45.10.16'
