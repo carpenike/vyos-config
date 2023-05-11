@@ -73,7 +73,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 stop '10.20.0.254'
 
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 ip-address '10.20.0.20'
-set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 mac-address '00:a0:98:5a:f7:f0'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 mac-address '00:a0:98:59:28:02'
 
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-0 ip-address '10.20.10.20'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping node-0 mac-address '0c:c4:7a:8e:90:f4'
