@@ -29,6 +29,7 @@ node-1                     IN  A  10.20.10.21
 node-2                     IN  A  10.20.10.22
 node-3                     IN  A  10.20.10.23
 nginx-ingress              IN  A  10.45.10.10
+onepassword-connect        IN  A  10.6.0.5
 
 ; Mgmt
 nas-0-ipmi                 IN  A  10.9.18.10
