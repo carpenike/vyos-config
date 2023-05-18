@@ -50,11 +50,11 @@ set interfaces bonding bond0 vif 4000 ipv6 address autoconf
 
 set interfaces wireguard wg01 address '10.11.0.1/16'
 set interfaces wireguard wg01 description 'WIREGUARD'
-# set interfaces wireguard wg01 peer iphone-ryan allowed-ips '10.11.0.2/32'
-# set interfaces wireguard wg01 peer iphone-ryan persistent-keepalive '15'
-# set interfaces wireguard wg01 peer iphone-ryan public-key 'bi5n7JHhg3SNZ/BHOS7F99ou39NKt8L2RmCNzKLiOw4=='
 set interfaces wireguard wg01 peer rymac allowed-ips '10.11.0.2/32'
 set interfaces wireguard wg01 peer rymac persistent-keepalive '15'
 set interfaces wireguard wg01 peer rymac public-key '/8Kd5E9GpwwY+KdR5dhOZuR+TDqMcOgXAOm9k7p5zU0='
+set interfaces wireguard wg01 peer iphone-ryan allowed-ips '10.11.0.3/32'
+set interfaces wireguard wg01 peer iphone-ryan persistent-keepalive '15'
+set interfaces wireguard wg01 peer iphone-ryan public-key 'boTBBrvrDJWSO2y6iTrqtvnLpOWwvySsUfPLKSOtbAs='
 set interfaces wireguard wg01 port '51820'
 set interfaces wireguard wg01 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
