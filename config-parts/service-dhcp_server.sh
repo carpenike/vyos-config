@@ -141,8 +141,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-se
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 start '10.30.0.200'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 stop '10.30.0.254'
 
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad ip-address '10.30.50.252'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad mac-address '10:00:20:33:a3:84'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad ip-address '10.30.50.252'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Caydans-iPad mac-address '10:00:20:33:a3:84'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad ip-address '10.30.50.200'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Ryans-iPad mac-address 'ac:00:7a:55:4b:07'
@@ -159,8 +159,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping StefaniesiPhone ip-address '10.30.50.201'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping StefaniesiPhone mac-address '88:b9:45:32:84:e4'
 
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad ip-address '10.30.50.255'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad mac-address '6c:7e:67:af:7d:46'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad ip-address '10.30.50.255'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping Taylors-iPad mac-address '6c:7e:67:af:7d:46'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rybook ip-address '10.30.50.250'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping rybook mac-address 'bc:83:85:cf:53:82'

@@ -45,3 +45,7 @@ vpn                        IN  CNAME  fw.holthome.net.
 ipv4                       IN  CNAME  nginx-ingress.holthome.net.
 minio                      IN  CNAME  nas-1.holthome.net.
 minio-s3                   IN  CNAME  nas-1.holthome.net.
+
+; Client Records
+Taylors-iPad               IN  A      10.30.50.255
+Caydans-iPad               IN  A      10.30.50.252
