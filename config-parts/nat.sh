@@ -41,12 +41,12 @@ set nat destination rule 104 protocol 'tcp_udp'
 set nat destination rule 104 translation address '10.6.0.4'
 set nat destination rule 104 translation port '53'
 
-set nat destination rule 105 description 'Force DNS for Video'
-set nat destination rule 105 destination address '!10.6.0.4'
+set nat destination rule 105 description 'Force DNS for Wireless'
+set nat destination rule 105 destination address '!10.6.0.6'
 set nat destination rule 105 destination port '53'
-set nat destination rule 105 inbound-interface 'bond0.50'
+set nat destination rule 105 inbound-interface 'bond0.30'
 set nat destination rule 105 protocol 'tcp_udp'
-set nat destination rule 105 translation address '10.6.0.4'
+set nat destination rule 105 translation address '10.6.0.6'
 set nat destination rule 105 translation port '53'
 
 # Force NTP
