@@ -115,7 +115,7 @@ set service dhcp-server shared-network-name WIRED ping-check
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 default-router '10.10.0.1'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 lease '86400'
-set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 name-server '10.6.0.4'
+set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 name-server '10.6.0.6'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 start '10.10.0.200'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 range 0 stop '10.10.0.254'
 
@@ -137,7 +137,7 @@ set service dhcp-server shared-network-name WIRELESS ping-check
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 default-router '10.30.0.1'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 domain-name 'holthome.net'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 lease '86400'
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-server '10.6.0.4'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 name-server '10.6.0.6'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 start '10.30.0.200'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 range 0 stop '10.30.0.254'
 
