@@ -220,7 +220,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hp-printer mac-address 'f8:0d:ac:7b:d9:90'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hue-bridge ip-address '10.30.100.181'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hue-bridge mac-address 'ec:b5:fa:9c:5a:d3'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hue-bridge mac-address 'ec:b5:fa:9c:5a:d3'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hue-bridge static-mapping-parameters "ddns-hostname hue-bridge;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv ip-address '10.30.100.170'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv mac-address '20:3d:bd:6b:24:d2'
