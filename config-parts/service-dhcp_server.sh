@@ -193,7 +193,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping firetv-bar-tv mac-address '74:ec:b2:5a:c3:47'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping flair ip-address '10.30.100.182'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping flair mac-address '48:3f:da:52:ec:3c'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping flair mac-address '48:3f:da:52:ec:3c'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping flair static-mapping-parameters "ddns-hostname flair;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping front-under-bar-lights ip-address '10.30.100.203'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping front-under-bar-lights mac-address '84:cc:a8:af:a2:ca'
@@ -224,25 +225,32 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping hue-bridge static-mapping-parameters "ddns-hostname hue-bridge;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv ip-address '10.30.100.170'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv mac-address '20:3d:bd:6b:24:d2'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv mac-address '20:3d:bd:6b:24:d2'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-basement-tv static-mapping-parameters "ddns-hostname lg-basement-tv;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-master-bedroom-tv ip-address '10.30.100.171'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-master-bedroom-tv mac-address 'ac:f1:08:59:b5:46'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-master-bedroom-tv mac-address 'ac:f1:08:59:b5:46'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lg-master-bedroom-tv static-mapping-parameters "ddns-hostname lg-master-bedroom-tv;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-1 ip-address '10.30.100.190'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-1 mac-address 'd0:73:d5:20:16:2a'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-1 mac-address 'd0:73:d5:20:16:2a'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-1 static-mapping-parameters "ddns-hostname lifx-bar-ceiling-1;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-2 ip-address '10.30.100.191'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-2 mac-address 'd0:73:d5:20:18:7d'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-2 mac-address 'd0:73:d5:20:18:7d'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-2 static-mapping-parameters "ddns-hostname lifx-bar-ceiling-2;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-3 ip-address '10.30.100.192'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-3 mac-address 'd0:73:d5:20:24:d5'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-3 mac-address 'd0:73:d5:20:24:d5'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-bar-ceiling-3 static-mapping-parameters "ddns-hostname lifx-bar-ceiling-3;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-ryan ip-address '10.30.100.195'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-ryan mac-address 'd0:73:d5:11:55:05'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-ryan mac-address 'd0:73:d5:11:55:05'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-ryan static-mapping-parameters "ddns-hostname lifx-mb-ryan;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-steffi ip-address '10.30.100.196'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-steffi mac-address 'd0:73:d5:11:59:1c'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-steffi mac-address 'd0:73:d5:11:59:1c'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping lifx-mb-steffi static-mapping-parameters "ddns-hostname lifx-mb-steffi;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping master-bathroom-counter-light ip-address '10.30.100.207'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping master-bathroom-counter-light mac-address 'e8:68:e7:f0:45:cd'
