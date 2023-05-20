@@ -297,8 +297,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-office static-mapping-parameters "ddns-hostname sonos-office;"
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-office mac-address '48:a6:b8:68:81:b5'
 
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-kitchen-1 static-mapping-parameters "ddns-hostname sonos-kitchen;"
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-kitchen-1 mac-address '34:7e:5c:1e:04:82'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-kitchen static-mapping-parameters "ddns-hostname sonos-kitchen;"
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-kitchen mac-address '34:7e:5c:1e:04:82'
 
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-livingroom-tv static-mapping-parameters "ddns-hostname sonos-livingroom-tv;"
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-livingroom-tv mac-address '54:2a:1b:87:58:10'
@@ -308,6 +308,9 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-upstairs-hallway static-mapping-parameters "ddns-hostname sonos-upstairs-hallway;"
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-upstairs-hallway mac-address '5c:aa:fd:4e:d2:9e'
+
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-livingroom static-mapping-parameters "ddns-hostname sonos-livingroom;"
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sonos-livingroom mac-address '34:7e:5c:1e:04:4c'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sunroom-corner-lights ip-address '10.30.100.202'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping sunroom-corner-lights mac-address 'e8:68:e7:f1:5a:c3'
