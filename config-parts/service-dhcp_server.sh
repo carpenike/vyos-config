@@ -268,13 +268,16 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nintendo-switch-2 mac-address '48:a5:e7:79:07:ef'
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-basement ip-address '10.30.100.13'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-basement mac-address '48:b0:2d:13:b7:a0'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-basement mac-address '48:b0:2d:13:b7:a0'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-basement static-mapping-parameters "ddns-hostname nvidia-shield-tv-basement;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-livingroom ip-address '10.30.100.12'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-livingroom mac-address '00:04:4b:83:12:01'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-livingroom mac-address '00:04:4b:83:12:01'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-livingroom static-mapping-parameters "ddns-hostname nvidia-shield-tv-livingroom;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-master-bedroom ip-address '10.30.100.14'
-# set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-master-bedroom mac-address '48:b0:2d:13:d1:d6'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-master-bedroom mac-address '48:b0:2d:13:d1:d6'
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping nvidia-shield-tv-master-bedroom static-mapping-parameters "ddns-hostname nvidia-shield-tv-master-bedroom;"
 
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping openspot4 ip-address '10.30.100.245'
 # set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping openspot4 mac-address '7c:df:a1:e6:d5:ac'
