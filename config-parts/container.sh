@@ -145,7 +145,7 @@ set container name onepassword-sync volume data mode 'rw'
 
 set container name smtp-relay environment SMTP_DOMAIN value 'holthome.net'
 set container name smtp-relay environment SMTP_PORT value '587'
-set container name smtp-relay environment SMTP_SERVER value 'exoip-com.mail.protection.outlook.com'
+set container name smtp-relay environment SMTP_SERVER value 'smtp.office365.com'
 set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.6.3'
 set container name smtp-relay memory '0'
 set container name smtp-relay network containers address '10.6.0.25'
