@@ -140,3 +140,16 @@ set container name onepassword-sync volume credentials mode 'ro'
 set container name onepassword-sync volume data source '/tmp/onepassword/data'
 set container name onepassword-sync volume data destination '/home/opuser/.op/data'
 set container name onepassword-sync volume data mode 'rw'
+
+# maddy
+
+set container name smtp-relay environment SMTP_DOMAIN value 'holthome.net'
+set container name smtp-relay environment SMTP_PORT value '25'
+set container name smtp-relay environment SMTP_SERVER value 'exoip-com.mail.protection.outlook.com'
+set container name smtp-relay image 'ghcr.io/foxcpp/maddy:0.6.3'
+set container name smtp-relay memory '0'
+set container name smtp-relay network containers address '10.6.0.25'
+set container name smtp-relay shared-memory '0'
+set container name smtp-relay volume smtp-relay-config destination '/data/maddy.conf'
+set container name smtp-relay volume smtp-relay-config mode 'ro'
+set container name smtp-relay volume smtp-relay-config source '/config/containers/smtp-relay/config/maddy.conf'
