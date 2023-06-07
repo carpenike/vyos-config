@@ -18,3 +18,6 @@ set protocols bgp neighbor 10.20.10.23 description 'node-3'
 set protocols bgp neighbor 10.20.10.23 remote-as '64512'
 set protocols bgp parameters router-id '10.20.0.1'
 set protocols bgp system-as '64512'
+
+# Static route for PepLink / RV
+set protocols static route 192.168.50.0/24 next-hop 10.10.0.10
