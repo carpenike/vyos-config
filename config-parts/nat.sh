@@ -1,29 +1,5 @@
 #!/bin/vbash
 
-# Forward HTTP(S) to ingress
-set nat destination rule 100 description 'HTTPS'
-set nat destination rule 100 destination port '443'
-set nat destination rule 100 inbound-interface 'bond0.4000'
-set nat destination rule 100 protocol 'tcp'
-set nat destination rule 100 translation address '10.45.10.10'
-set nat destination rule 100 translation port '443'
-
-set nat destination rule 101 description 'HTTP'
-set nat destination rule 101 destination port '80'
-set nat destination rule 101 inbound-interface 'bond0.4000'
-set nat destination rule 101 protocol 'tcp'
-set nat destination rule 101 translation address '10.45.10.10'
-set nat destination rule 101 translation port '80'
-
-# Forward Plex
-
-set nat destination rule 102 description 'Plex'
-set nat destination rule 102 destination port '32400'
-set nat destination rule 102 inbound-interface 'bond0.4000'
-set nat destination rule 102 protocol 'tcp'
-set nat destination rule 102 translation address '10.45.100.100'
-set nat destination rule 102 translation port '80'
-
 # Force DNS
 set nat destination rule 103 description 'Force DNS for IoT'
 set nat destination rule 103 destination address '!10.6.0.4'
@@ -91,41 +67,6 @@ set nat destination rule 110 translation address '10.11.0.1'
 set nat destination rule 110 translation port '123'
 
 # Forward XBox Ports
-# set nat destination rule 110 description 'Forward UDP Xbox Ports to Xbox (88)'
-# set nat destination rule 110 destination port '88'
-# set nat destination rule 110 inbound-interface 'bond0.4000'
-# set nat destination rule 110 protocol 'udp'
-# set nat destination rule 110 translation address '10.40.50.16'
-# set nat destination rule 110 translation port '88'
-
-# set nat destination rule 111 description 'Forward UDP Xbox Ports to Xbox (500)'
-# set nat destination rule 111 destination port '500'
-# set nat destination rule 111 inbound-interface 'bond0.4000'
-# set nat destination rule 111 protocol 'udp'
-# set nat destination rule 111 translation address '10.40.50.16'
-# set nat destination rule 111 translation port '500'
-
-# set nat destination rule 112 description 'Forward UDP Xbox Ports to Xbox (3074)'
-# set nat destination rule 112 destination port '3074'
-# set nat destination rule 112 inbound-interface 'bond0.4000'
-# set nat destination rule 112 protocol 'udp'
-# set nat destination rule 112 translation address '10.40.50.16'
-# set nat destination rule 112 translation port '3074'
-
-# set nat destination rule 113 description 'Forward UDP Xbox Ports to Xbox (3544)'
-# set nat destination rule 113 destination port '3544'
-# set nat destination rule 113 inbound-interface 'bond0.4000'
-# set nat destination rule 113 protocol 'udp'
-# set nat destination rule 113 translation address '10.40.50.16'
-# set nat destination rule 113 translation port '3544'
-
-# set nat destination rule 114 description 'Forward UDP Xbox Ports to Xbox (4500)'
-# set nat destination rule 114 destination port '4500'
-# set nat destination rule 114 inbound-interface 'bond0.4000'
-# set nat destination rule 114 protocol 'udp'
-# set nat destination rule 114 translation address '10.40.50.16'
-# set nat destination rule 114 translation port '4500'
-
 set nat destination rule 114 description 'Forward UDP Xbox Ports to Xbox'
 set nat destination rule 114 destination port '88,500,3074,3544,4500'
 set nat destination rule 114 inbound-interface 'bond0.4000'
