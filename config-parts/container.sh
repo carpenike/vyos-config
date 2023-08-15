@@ -157,3 +157,18 @@ set container name smtp-relay volume holthome-cert source '/config/secrets/star_
 set container name smtp-relay volume holthome-cert destination '/data/star_holthome_net.crt'
 set container name smtp-relay volume holthome-cert-key source '/config/secrets/star_holthome_net.key'
 set container name smtp-relay volume holthome-cert-key destination '/data/star_holthome_net.key'
+
+# unifi
+set container name unifi environment RUNAS_UID0 value 'false'
+set container name unifi environment TZ value 'America/New_York'
+set container name unifi environment UNIFI_GID value '999'
+set container name unifi environment UNIFI_STDOUT value 'true'
+set container name unifi environment UNIFI_UID value '999'
+set container name unifi image 'ghcr.io/jacobalberty/unifi-docker:v7.4.162'
+set container name unifi memory '0'
+set container name unifi network containers address '10.6.0.10'
+set container name unifi restart 'on-failure'
+set container name unifi shared-memory '0'
+set container name unifi volume data source '/config/containers/unifi'
+set container name unifi volume data destination '/unifi'
+set container name unifi volume data mode 'rw'
