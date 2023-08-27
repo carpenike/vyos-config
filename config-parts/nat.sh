@@ -97,7 +97,7 @@ set nat destination rule 118 description 'Forward Ports for QB'
 set nat destination rule 118 destination port '61144'
 set nat destination rule 118 inbound-interface 'bond0.4000'
 set nat destination rule 118 protocol 'tcp_udp'
-set nat destination rule 118 translation address '10.10.0.19'
+set nat destination rule 118 translation address '10.45.10.19'
 
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
