@@ -72,6 +72,9 @@ set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 name-ser
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 start '10.20.0.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 range 0 stop '10.20.0.254'
 
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.5/16 static-mapping fh ip-address '10.20.0.5'
+set service dhcp-server shared-network-name SERVERS subnet 10.20.0.5/16 static-mapping fh mac-address '52:54:00:d0:81:38'
+
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 ip-address '10.20.0.20'
 set service dhcp-server shared-network-name SERVERS subnet 10.20.0.0/16 static-mapping cp-0 mac-address '52:54:00:bf:00:c2'
 
@@ -127,9 +130,6 @@ set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-map
 
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping rydesk ip-address '10.10.0.200'
 set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping rydesk mac-address '8a:3c:36:ca:48:4e'
-
-set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping fh ip-address '10.10.0.10'
-set service dhcp-server shared-network-name WIRED subnet 10.10.0.0/16 static-mapping fh mac-address '52:54:00:27:a0:64'
 
 # Wireless VLAN
 set service dhcp-server shared-network-name WIRELESS authoritative
