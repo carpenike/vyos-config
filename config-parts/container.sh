@@ -4,7 +4,7 @@
 set container network containers prefix '10.6.0.0/16'
 
 # adguard-home
-set container name adguard-home image 'docker.io/adguard/adguardhome:v0.107.38'
+set container name adguard-home image 'docker.io/adguard/adguardhome:v0.107.43'
 set container name adguard-home memory '0'
 set container name adguard-home network containers address '10.6.0.6'
 set container name adguard-home restart 'on-failure'
