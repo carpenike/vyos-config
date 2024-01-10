@@ -10,8 +10,10 @@ set system name-server '10.6.0.4'
 
 set system sysctl parameter kernel.pty.max value '24000'
 
+set system syslog global facility all level info
 set system syslog host 10.45.10.16 facility kern level 'warning'
-set system syslog host 10.45.10.16 facility kern protocol 'tcp'
+set system syslog host 10.45.10.16 protocol 'tcp'
 set system syslog host 10.45.10.16 port '6001'
+set system syslog host 10.45.10.16 format 'octet-counted'
 
 set system time-zone 'America/New_York'

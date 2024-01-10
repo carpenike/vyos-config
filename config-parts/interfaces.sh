@@ -32,11 +32,11 @@ set interfaces bonding bond0 vif 30 description 'WIRELESS'
 set interfaces bonding bond0 vif 35 address '10.35.0.1/16'
 set interfaces bonding bond0 vif 35 description 'GUEST'
 
-set interfaces bonding bond0 vif 40 address '10.40.0.1/16'
-set interfaces bonding bond0 vif 40 description 'IOT'
+# set interfaces bonding bond0 vif 40 address '10.40.0.1/16'
+# set interfaces bonding bond0 vif 40 description 'IOT'
 
 set interfaces bonding bond0 vif 50 address '10.50.0.1/16'
-set interfaces bonding bond0 vif 5 description 'VIDEO'
+set interfaces bonding bond0 vif 50 description 'VIDEO'
 
 set interfaces bonding bond0 vif 4000 address 'dhcp'
 set interfaces bonding bond0 vif 4000 address 'dhcpv6'

@@ -11,7 +11,7 @@ set interfaces bonding bond0 member interface eth2
 set interfaces bonding bond0 member interface eth3
 
 # Setup VLANs on bond0 interface
-set interfaces bonding bond0 vif 5 description 'Failsafe'
+set interfaces bonding bond0 vif 5 description 'RESCUE'
 set interfaces bonding bond0 vif 5 address '10.5.0.1/16'
 
 set interfaces bonding bond0 vif 10 description 'WIRED'

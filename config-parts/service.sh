@@ -12,3 +12,9 @@ set service ntp server time.cloudflare.com
 # SSH server
 set service ssh disable-password-authentication
 set service ssh port '22'
+
+# UDP Broadast-Relay
+set service broadcast-relay id 1 description 'Sonos'
+set service broadcast-relay id 1 interface 'bond0.20'
+set service broadcast-relay id 1 interface 'bond0.30'
+set service broadcast-relay id 1 port '1900'

@@ -20,4 +20,4 @@ set protocols bgp parameters router-id '10.20.0.1'
 set protocols bgp system-as '64512'
 
 # Static route for PepLink / RV
-set protocols static route 192.168.50.0/24 next-hop 10.10.0.10
+set protocols static route 192.168.50.0/24 next-hop 10.20.0.5

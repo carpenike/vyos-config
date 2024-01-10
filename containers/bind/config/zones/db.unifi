@@ -16,4 +16,4 @@ $ORIGIN unifi.
 @                          IN  NS fw.holthome.net.
 
 ; CNAME Records
-@                          IN  A  10.45.10.17
+@                          IN  A  10.6.0.10
