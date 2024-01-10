@@ -1,6 +1,7 @@
 #!/bin/vbash
 
 # Container networks
+set container network containers description 'Network for VyOS containers'
 set container network containers prefix '10.6.0.0/16'
 
 # adguard-home
@@ -53,6 +54,23 @@ set container name dnsdist volume config destination '/etc/dnsdist/dnsdist.conf'
 set container name dnsdist volume config source '/config/containers/dnsdist/config/dnsdist.conf'
 set container name dnsdist volume config mode 'ro'
 
+# wildcard certificate
+set container name lego-auto image 'ghcr.io/bjw-s/lego-auto:v0.2.0'
+set container name lego-auto memory '0'
+set container name lego-auto allow-host-networks
+set container name lego-auto shared-memory '0'
+set container name lego-auto restart 'on-failure'
+set container name lego-auto environment TZ value 'Europe/Amsterdam'
+set container name lego-auto environment LA_DATADIR value '/config'
+set container name lego-auto environment LA_CACHEDIR value '/config/.cache'
+set container name lego-auto environment LA_EMAIL value 'postmaster@holthome.net'
+set container name lego-auto environment LA_PROVIDER value 'cloudflare'
+set container name lego-auto environment LA_DOMAINS value '*.holthome.net'
+set container name lego-auto environment CF_DNS_API_TOKEN value "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
+set container name lego-auto volume datadir source '/config/secrets/certs/_.holthome.net'
+set container name lego-auto volume datadir destination '/config'
+set container name lego-auto volume datadir mode 'rw'
+
 # haproxy-k8s-api
 set container name haproxy-k8s-api image 'docker.io/library/haproxy:2.8.3'
 set container name haproxy-k8s-api memory '0'
@@ -92,7 +110,7 @@ set container name speedtest-exporter shared-memory '0'
 # udp-broadcast-relay-mdns
 set container name udp-broadcast-relay-mdns allow-host-networks
 set container name udp-broadcast-relay-mdns cap-add 'net-raw'
-set container name udp-broadcast-relay-mdns environment CFG_DEV value 'bond0.20;bond0.40'
+set container name udp-broadcast-relay-mdns environment CFG_DEV value 'bond0.20;bond0.30'
 set container name udp-broadcast-relay-mdns environment CFG_ID value '2'
 set container name udp-broadcast-relay-mdns environment CFG_MULTICAST value '224.0.0.251'
 set container name udp-broadcast-relay-mdns environment CFG_PORT value '5353'
@@ -105,7 +123,7 @@ set container name udp-broadcast-relay-mdns shared-memory '0'
 # udp-broadcast-relay-sonos
 set container name udp-broadcast-relay-sonos allow-host-networks
 set container name udp-broadcast-relay-sonos cap-add 'net-raw'
-set container name udp-broadcast-relay-sonos environment CFG_DEV value 'bond0.20;bond0.40'
+set container name udp-broadcast-relay-sonos environment CFG_DEV value 'bond0.20;bond0.30'
 set container name udp-broadcast-relay-sonos environment CFG_ID value '1'
 set container name udp-broadcast-relay-sonos environment CFG_MULTICAST value '239.255.255.250'
 set container name udp-broadcast-relay-sonos environment CFG_PORT value '1900'
