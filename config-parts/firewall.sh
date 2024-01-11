@@ -70,7 +70,7 @@ set firewall group address-group sonos_controllers address '10.30.100.61' # Sono
 
 # Sonos players
 set firewall group port-group sonos-player-discovery port '1900'
-set firewall group address-group sonos_players address '10.30.50.200-10.30.50.260'
+set firewall group address-group sonos_players address '10.30.50.200-10.30.50.254'
 
 # Unifi devices
 set firewall group address-group unifi_devices address '10.9.18.103-10.9.18.104' # Switches
