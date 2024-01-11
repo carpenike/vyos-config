@@ -13,7 +13,3 @@ mkdir -p /tmp/onepassword/data
 chown -R 999 /tmp/onepassword/data
 mkdir -p /tmp/bind/cache
 chown -R 104 /tmp/bind/cache
-
-# Mount USB Backup Drive
-backupdest=/media/usb-backup
-mkdir -p "$backupdest"
