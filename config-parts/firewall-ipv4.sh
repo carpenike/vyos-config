@@ -408,11 +408,11 @@ set firewall ipv4 name local-mgmt rule 200 description 'Rule: accept_discovery_f
 set firewall ipv4 name local-mgmt rule 200 destination group port-group sonos-player-discovery
 set firewall ipv4 name local-mgmt rule 200 protocol 'udp'
 set firewall ipv4 name local-mgmt rule 200 source group address-group 'sonos_players'
-set firewall ipv4 name local-mgmt rule 300 action 'accept'
-set firewall ipv4 name local-mgmt rule 300 description 'Rule: accept_discovery_from_bambu_printers'
-set firewall ipv4 name local-mgmt rule 300 destination group port-group bambu-discovery
-set firewall ipv4 name local-mgmt rule 300 protocol 'udp'
-set firewall ipv4 name local-mgmt rule 300 source group address-group 'bambu-printers'
+# set firewall ipv4 name local-mgmt rule 300 action 'accept'
+# set firewall ipv4 name local-mgmt rule 300 description 'Rule: accept_discovery_from_bambu_printers'
+# set firewall ipv4 name local-mgmt rule 300 destination group port-group bambu-discovery
+# set firewall ipv4 name local-mgmt rule 300 protocol 'udp'
+# set firewall ipv4 name local-mgmt rule 300 source group address-group 'bambu-printers'
 set firewall ipv4 name local-mgmt rule 400 action 'accept'
 set firewall ipv4 name local-mgmt rule 400 description 'Rule: accept_wireguard'
 set firewall ipv4 name local-mgmt rule 400 source port '51820'
