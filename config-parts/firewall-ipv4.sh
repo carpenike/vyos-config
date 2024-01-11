@@ -232,7 +232,7 @@ set firewall ipv4 name guest-wan description 'From GUEST to WAN'
 
 # From WIRELESS to GUEST
 set firewall ipv4 name wireless-guest default-action 'drop'
-set firewall ipv4 name wireless-guest description 'From wireless to GUEST'
+set firewall ipv4 name wireless-guest description 'From WIRELESS to GUEST'
 set firewall ipv4 name wireless-guest default-log
 set firewall ipv4 name wireless-guest rule 999 action 'drop'
 set firewall ipv4 name wireless-guest rule 999 description 'Rule: drop_invalid'
@@ -241,7 +241,7 @@ set firewall ipv4 name wireless-guest rule 999 log
 
 # From wireless to IOT
 set firewall ipv4 name wireless-iot default-action 'drop'
-set firewall ipv4 name wireless-iot description 'From wireless to IOT'
+set firewall ipv4 name wireless-iot description 'From WIRELESS to IOT'
 set firewall ipv4 name wireless-iot default-log
 set firewall ipv4 name wireless-iot rule 999 action 'drop'
 set firewall ipv4 name wireless-iot rule 999 description 'Rule: drop_invalid'
@@ -250,7 +250,7 @@ set firewall ipv4 name wireless-iot rule 999 log
 
 # From WIRELESS to LOCAL
 set firewall ipv4 name wireless-local default-action 'drop'
-set firewall ipv4 name wireless-local description 'From wireless to LOCAL'
+set firewall ipv4 name wireless-local description 'From WIRELESS to LOCAL'
 set firewall ipv4 name wireless-local default-log
 set firewall ipv4 name wireless-local rule 50 action 'accept'
 set firewall ipv4 name wireless-local rule 50 description 'Rule: accept_dhcp'
