@@ -63,7 +63,7 @@ set firewall group address-group sonos_controllers address '10.30.100.54' # Sono
 set firewall group address-group sonos_controllers address '10.30.100.55' # Sonos LivingRoom TV
 set firewall group address-group sonos_controllers address '10.30.100.56' # Sonos Bedroom TV
 set firewall group address-group sonos_controllers address '10.30.100.57' # Sonos Upstairs Hallway
-set firewall gorup address-group sonos_controllers address '10.30.100.58' # Sonos Living Room Surround 1
+set firewall group address-group sonos_controllers address '10.30.100.58' # Sonos Living Room Surround 1
 set firewall group address-group sonos_controllers address '10.30.100.59' # Sonos Jayme's Roam
 set firewall group address-group sonos_controllers address '10.30.100.60' # Sonos Taylor's Roam
 set firewall group address-group sonos_controllers address '10.30.100.61' # Sonos Caydan's Roam
