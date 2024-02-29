@@ -206,10 +206,6 @@ set container name omada volume data mode 'rw'
 set container name omada volume logs source '/config/containers/omada/logs'
 set container name omada volume logs destination '/opt/tplink/EAPController/logs'
 set container name omada volume logs mode 'rw'
-set container name omada volume holthome-cert source '/config/secrets/star_holthome_net.crt'
-set container name omada volume holthome-cert destination '/certs/star_holthome_net.crt'
-set container name omada volume holthome-cert-key source '/config/secrets/star_holthome_net.key'
-set container name omada volume holthome-cert-key destination '/certs/star_holthome_net.key'
 
 # vnstat
 set container name vnstat allow-host-networks
