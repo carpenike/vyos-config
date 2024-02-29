@@ -35,7 +35,7 @@ set service dhcp-server shared-network-name GUEST subnet 10.35.0.0/16 range 0 st
 # MGMT
 set service dhcp-server shared-network-name MGMT authoritative
 set service dhcp-server shared-network-name MGMT ping-check
-set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 subnet-parameters 'option omada-address 10.45.10.20;'
+set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 subnet-parameters 'option omada-address 10.6.0.11;'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 default-router '10.9.18.1'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 lease '86400'
 set service dhcp-server shared-network-name MGMT subnet 10.9.18.0/24 name-server '10.6.0.4'
