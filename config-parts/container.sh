@@ -191,6 +191,26 @@ set container name unifi volume data source '/config/containers/unifi'
 set container name unifi volume data destination '/unifi'
 set container name unifi volume data mode 'rw'
 
+# omada
+set container name omada environment TZ value 'America/New_York'
+set container name omada environment SSL_CERT_NAME value '/certs/star_holthome_net.crt'
+set container name omada environment SSL_KEY_NAME value '/config/secrets/star_holthome_net.key'
+set container name omada image 'docker.io/mbentley/omada-controller:5.13'
+set container name omada memory '0'
+set container name omada network containers address '10.6.0.11'
+set container name omada restart 'on-failure'
+set container name omada shared-memory '0'
+set container name omada volume data source '/config/containers/omada/data'
+set container name omada volume data destination '/opt/tplink/EAPController/data'
+set container name omada volume data mode 'rw'
+set container name omada volume logs source '/config/containers/omada/logs'
+set container name omada volume logs destination '/opt/tplink/EAPController/logs'
+set container name omada volume logs mode 'rw'
+set container name omada volume holthome-cert source '/config/secrets/star_holthome_net.crt'
+set container name omada volume holthome-cert destination '/certs/star_holthome_net.crt'
+set container name omada volume holthome-cert-key source '/config/secrets/star_holthome_net.key'
+set container name omada volume holthome-cert-key destination '/certs/star_holthome_net.key'
+
 # vnstat
 set container name vnstat allow-host-networks
 set container name vnstat environment EXCLUDE_PATTERN value '^docker|^veth|^br-|^lxc'

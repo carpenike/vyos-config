@@ -3,10 +3,6 @@
 
 # Track certain files and directories
 !.gitignore
-
-!/bind/
-!/dnsdist/
-!/haproxy/
-!/omada/
-!/unifi/
-!/vector-agent/
+!.gitkeep
+!/data/
+!/logs/
