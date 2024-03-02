@@ -71,13 +71,13 @@ set nat destination rule 114 description 'Forward UDP Xbox Ports to Xbox'
 set nat destination rule 114 destination port '88,500,3074,3544,4500'
 set nat destination rule 114 inbound-interface name 'bond0.4000'
 set nat destination rule 114 protocol 'udp'
-set nat destination rule 114 translation address '10.40.50.16'
+set nat destination rule 114 translation address '10.30.100.16'
 
 set nat destination rule 115 description 'Forward TCP Xbox Ports to Xbox'
 set nat destination rule 115 destination port '3074'
 set nat destination rule 115 inbound-interface name 'bond0.4000'
 set nat destination rule 115 protocol 'tcp'
-set nat destination rule 115 translation address '10.40.50.16'
+set nat destination rule 115 translation address '10.30.100.16'
 set nat destination rule 115 translation port '3074'
 
 # Forward FusionHub Ports
