@@ -42,7 +42,9 @@ $ORIGIN in-addr.arpa.
 ; Services
 2.0.6.10                   IN  PTR  cluster-0.holthome.net.
 10.0.6.10                  IN  PTR  unifi.holthome.net.
+11.0.6.10                  IN  PTR  omada.holthome.net.
 
 ; Wireless
 255.50.30.10               IN  PTR   Taylors-iPad.holthome.net.
 252.50.30.10               IN  PTR   Caydans-iPad.holthome.net.
+183.100.30.10              IN  PTR   zigbee-controller.holthome.net.
