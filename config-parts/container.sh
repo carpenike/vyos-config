@@ -107,32 +107,6 @@ set container name speedtest-exporter allow-host-networks
 set container name speedtest-exporter restart 'on-failure'
 set container name speedtest-exporter shared-memory '0'
 
-# udp-broadcast-relay-mdns
-# set container name udp-broadcast-relay-mdns allow-host-networks
-# set container name udp-broadcast-relay-mdns cap-add 'net-raw'
-# set container name udp-broadcast-relay-mdns environment CFG_DEV value 'bond0.20;bond0.30'
-# set container name udp-broadcast-relay-mdns environment CFG_ID value '2'
-# set container name udp-broadcast-relay-mdns environment CFG_MULTICAST value '224.0.0.251'
-# set container name udp-broadcast-relay-mdns environment CFG_PORT value '5353'
-# set container name udp-broadcast-relay-mdns environment SEPARATOR value ';'
-# set container name udp-broadcast-relay-mdns image 'ghcr.io/onedr0p/udp-broadcast-relay-redux:1.0.27'
-# set container name udp-broadcast-relay-mdns memory '0'
-# set container name udp-broadcast-relay-mdns restart 'on-failure'
-# set container name udp-broadcast-relay-mdns shared-memory '0'
-
-# udp-broadcast-relay-sonos
-# set container name udp-broadcast-relay-sonos allow-host-networks
-# set container name udp-broadcast-relay-sonos cap-add 'net-raw'
-# set container name udp-broadcast-relay-sonos environment CFG_DEV value 'bond0.20;bond0.30'
-# set container name udp-broadcast-relay-sonos environment CFG_ID value '1'
-# set container name udp-broadcast-relay-sonos environment CFG_MULTICAST value '239.255.255.250'
-# set container name udp-broadcast-relay-sonos environment CFG_PORT value '1900'
-# set container name udp-broadcast-relay-sonos environment SEPARATOR value ';'
-# set container name udp-broadcast-relay-sonos image 'ghcr.io/onedr0p/udp-broadcast-relay-redux:1.0.27'
-# set container name udp-broadcast-relay-sonos memory '0'
-# set container name udp-broadcast-relay-sonos restart 'on-failure'
-# set container name udp-broadcast-relay-sonos shared-memory '0'
-
 # onepassword-connect
 set container name onepassword-connect image 'docker.io/1password/connect-api:1.7.2'
 set container name onepassword-connect environment TZ value 'America/New_York'
