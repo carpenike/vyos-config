@@ -356,8 +356,8 @@ set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping zigbee-controller ip-address '10.30.100.183'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping zigbee-controller mac-address '94:b9:7e:6b:bb:d3'
 
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping caydan-chromebook ip-address ''
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping caydan-chromebook ip-address '10.30.50.240'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping caydan-chromebook mac-address 'd4:1b:81:45:a0:9b'
 
-set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping taylor-chromebook ip-address ''
+set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping taylor-chromebook ip-address '10.30.50.241'
 set service dhcp-server shared-network-name WIRELESS subnet 10.30.0.0/16 static-mapping taylor-chromebook mac-address '50:84:92:11:6a:e3'
