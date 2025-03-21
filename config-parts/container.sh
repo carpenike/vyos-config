@@ -72,7 +72,7 @@ set container name lego-auto volume datadir destination '/config'
 set container name lego-auto volume datadir mode 'rw'
 
 # haproxy-k8s-api
-set container name haproxy-k8s-api image 'docker.io/library/haproxy:2.8.3'
+set container name haproxy-k8s-api image 'docker.io/library/haproxy:2.9.1'
 set container name haproxy-k8s-api memory '0'
 set container name haproxy-k8s-api network containers address '10.6.0.2'
 set container name haproxy-k8s-api restart 'on-failure'
